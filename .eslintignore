@@ -1,0 +1,6 @@
+node_modules
+**/*.min.js
+build
+.cache
+remix.config.js
+.eslintrc.cjs
