@@ -4,3 +4,4 @@ build
 .cache
 remix.config.js
 .eslintrc.cjs
+.prettierrc.cjs
