@@ -26,9 +26,9 @@ export const DEFAULT_CONTROL_VALUES = {
     step: 0.1,
   },
   exponent: {
-    value: 2,
+    value: 3,
     min: 1,
-    max: 4,
+    max: 4.5,
     step: 0.25,
   },
   octaves: {
@@ -37,7 +37,7 @@ export const DEFAULT_CONTROL_VALUES = {
     max: 6,
     step: 1,
   },
-  wireframe: true,
+  wireframe: false,
 };
 
 interface HeightMapProps {
@@ -64,7 +64,7 @@ const HeightMap: React.FC<HeightMapProps> = ({ size = 200 }) => {
   }, [vertices, planeMesh, planeGeo]);
 
   return (
-    <mesh ref={planeMesh}>
+    <mesh ref={planeMesh} castShadow={true} receiveShadow={true}>
       <planeGeometry
         args={[size, size, controls.resolution, controls.resolution]}
         ref={planeGeo}
